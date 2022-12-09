@@ -1,0 +1,187 @@
+lis=["satwik","kumar",["gupta",3,[4,6]]]
+for i in range(len(lis)):
+    if type(lis[i])is list:
+        for j in range(len(lis[i])):
+            print(lis[i][j])
+            
+    else:
+        print(lis[i])
+        
+        
+        
+        
+        
+        
+        
+lis=[[2,3,3],["satwik",2]]
+
+for r in lis:
+    print(r)
+    for c in r:
+        print(c)
+        
+        
+        
+        
+        
+        
+a=["w",3,4,["e","r",[1,2]]]
+for i in range(len(a)):
+    if type(a[i]) is list:
+        for j in range(len(a[i])):
+            if type(a[i][j]) is list:
+                for k in range(len(a[i][j])):
+                    print(a[i][j][k])
+                    
+            else:
+                print(a[i][j])
+                
+    else:
+        print(a[i])
+        
+        
+        
+        
+        
+#filtering data in list
+a=[2,40,4,23,5,6,"satw","sdf",4]
+def fun(a):
+    if type(a) is str:
+        return True
+    
+    
+
+
+
+result=list(filter(fun,a))
+print(result)
+
+
+
+
+
+#use of map function
+a=[2,3,4]
+b=[1,4,7]
+c=[25,45,0]
+
+def fun(a,b,c):
+    return a+b+c
+
+
+
+
+
+
+result=list(map(fun,a,b,c))
+print(result)
+
+
+
+
+
+
+# using lambda function 
+a=[2,3,4]
+b=[1,4,7]
+
+
+
+
+
+
+
+
+result=list(map(lambda n,m:n*m,a,b))
+print(result)
+
+
+
+
+
+
+
+
+
+# nested list insert
+l=[]
+n=int(input("enter list size"))
+for i in range(n):
+    a=[input("enter name"),int(input("enter roll number of student"))]
+    l.append(a)
+    
+print(l)
+
+# output=[["satwik",1],["pawan",2],["anand",3]] if we press n =3
+
+
+
+# program to check a list is sublist or not
+def fun(a,l):
+    if len(l)>len(a):
+        return False
+    elif a==l:
+        
+        return True
+    elif l==():
+        
+        return True
+    else:
+        for i in range(len(a)):
+            if a[i]==l[0]:
+                n=1 
+                while(n<len(l)) and (a[i+n]==l[n]):
+                    n=n+1 
+                if n==len(l):
+                    return True
+
+
+
+
+
+
+
+a=[]
+n=int(input("enter number"))
+for i in range(n):
+    a.append(int(input("enter data")))
+print(a)
+    
+l=[]
+n=int(input("enter data"))
+for i in range(n):
+    l.append(int(input("enter data")))
+print(l)
+    
+print(fun(a,l))
+# use of itertools
+from itertools import combinations
+def fun(a):
+    m=[]
+    for i in range(1,len(a)+1):
+        y=[x for x in combinations(a,i)]
+        if len(y)>0:
+            m.extend(y)
+            
+    return m
+            
+        
+        
+
+a=[2,3,4,5]
+print(fun(a))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
